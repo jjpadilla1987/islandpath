@@ -1,0 +1,9 @@
+metric,value
+genomes,136
+production_total_gis,1400
+control_total_gis,1400
+expanded_total_gis,1578
+production_control_exact_genomes,136
+control_expanded_exact_genomes,1
+genomes_with_more_expanded_gis,100
+genomes_with_fewer_expanded_gis,0

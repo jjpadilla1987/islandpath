@@ -1,0 +1,12 @@
+diff -ru /ddnA/work/jpadilla/jroja11/pan_analysis/reanalyze/islandpath_github_deposit_kit/software/production_control/lib/Dimob.pm /ddnA/work/jpadilla/jroja11/pan_analysis/reanalyze/islandpath_github_deposit_kit/software/expanded_conversion/lib/Dimob.pm
+--- /ddnA/work/jpadilla/jroja11/pan_analysis/reanalyze/islandpath_github_deposit_kit/software/production_control/lib/Dimob.pm	2026-10-16 10:45:34.000000000 -0500
++++ /ddnA/work/jpadilla/jroja11/pan_analysis/reanalyze/islandpath_github_deposit_kit/software/expanded_conversion/lib/Dimob.pm	2026-10-12 09:43:16.000000000 -0500
+@@ -213,7 +213,7 @@
+ 
+     #convert the def line to gi numbers (the data structure is maintained)
+     my $extended = $self->{extended_ids} ? 1 : undef;
+-    my $dinuc_islands = defline2gi( $gi_orfs, "$filename.ptt", $extended );
++    my $dinuc_islands = windows_to_cds( $gi_orfs );
+ 
+     #check the dinuc islands against the mobility gene list
+     #any dinuc islands containing >=1 mobility gene are classified as
