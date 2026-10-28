@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
-BASE=${ISLANDPATH_BASE:-/ddnA/work/jpadilla/jroja11/pan_analysis/reanalyze/islandpath_dimob}
+: "${ISLANDPATH_BASE:?Please set ISLANDPATH_BASE to your IslandPath-DIMOB source directory}"
+BASE="$ISLANDPATH_BASE"
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 CONTROL="$BASE/validation/islandpath_conversion_control"
 EXPANDED="$BASE/islandpath_multicontig_fixed"
