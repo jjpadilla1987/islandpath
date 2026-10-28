@@ -46,7 +46,7 @@ for METHOD in production_control expanded_conversion; do
 
         perl -Ilib Dimob.pl \
             "${GENOME}.fixed.gbk" \
-            "${GENOME}.dimob_output.txt" \
+            "${GENOME}.gff3" \
             > run.stdout.log 2> run.stderr.log
     )
 
