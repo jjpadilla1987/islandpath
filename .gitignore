@@ -16,3 +16,6 @@ __pycache__/
 *.h3p
 results/
 logs/
+
+# Local standalone test outputs
+validation/standalone_test/
