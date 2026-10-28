@@ -1,0 +1,13 @@
+name: islandpath_dimob
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - perl=5.32.1
+  - hmmer=3.4
+  - perl-bioperl-core=1.7.8
+  - perl-bio-searchio-hmmer=1.7.3
+  - perl-config-simple=4.59
+  - perl-log-log4perl=1.56
+  - perl-moose=2.2207
+  - perl-moosex-singleton=0.30
