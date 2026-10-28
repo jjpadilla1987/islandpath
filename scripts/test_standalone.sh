@@ -6,7 +6,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 GENOME="${1:-RSPAM1}"
 INPUT="$ISLANDPATH_BASE/first_cds_136/input/${GENOME}.fixed.gbk"
-DB="$ISLANDPATH_BASE/islandpath_multicontig_fixed/hmmpfam/Pfam-A_mobgenes_201512_prok"
+DB="${ISLANDPATH_HMM_DB:-$ISLANDPATH_BASE/islandpath_multicontig_fixed/hmmpfam/Pfam-A_mobgenes_201512_prok}"
 
 TEST="$ROOT/validation/standalone_test/$GENOME"
 
