@@ -60,4 +60,34 @@ perl software/production_control/Dimob.pl genome.gbk genome.gff3
 
 ## Attribution and licensing
 
-Original method: IslandPath-DIMOB, Bertelli and Brinkman (2018). Cite the original publication and this repository with a versioned release/commit identifier. **Verify the upstream software license and preserve all copyright notices before redistributing modified source code.** No license is granted by this deposit kit for third-party source code.
+Original method: IslandPath-DIMOB, Bertelli and Brinkman (2018).
+
+This repository contains modified IslandPath-DIMOB source code derived
+from the Brinkman Laboratory implementation:
+
+https://github.com/brinkmanlab/islandpath
+
+The IslandPath-DIMOB derivative is distributed under the GNU General
+Public License, version 3 (GPLv3). See [LICENSE](LICENSE).
+
+Original authorship and copyright notices are retained. Bundled
+third-party Perl modules retain their respective licensing terms;
+see [Third-party notices](docs/THIRD_PARTY_NOTICES.md).
+
+Please cite the original IslandPath-DIMOB publication and the
+versioned release or commit of this modified implementation.
+
+
+### Reproducibility and validation
+
+The modified IslandPath-DIMOB implementation was evaluated using 136 dereplicated *Pantoea ananatis* genome assemblies.
+
+The production-coordinate implementation reproduced 1,400 genomic island predictions across the 136 genomes, with exact agreement between the production and control GFF3 coordinates.
+
+An alternative coordinate-conversion implementation, which expands candidate regions to include all six coding sequences in selected windows, generated 1,578 genomic island predictions. The additional 178 predictions represent a sensitivity analysis and have not been independently validated as genuine genomic islands.
+
+Coordinate-quality assessment identified no out-of-bounds genomic islands, duplicate intervals, or overlapping genomic island intervals within either implementation.
+
+Standalone execution was additionally tested using the three-contig RSPAM1 genome. Both deposited implementations completed successfully and reproduced their corresponding reference genomic island coordinates exactly: 15 predictions for the production implementation and 17 for the expanded implementation.
+
+These validation results establish computational reproducibility and coordinate consistency, but do not independently establish biological prediction accuracy.
